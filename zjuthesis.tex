@@ -1,49 +1,34 @@
-% Zhejiang University Graduation Thesis/Design Template
-% Author     : Zixuan Wang
-% Email      : zxwang42 [at] gmail.com
-% Update     : https://github.com/TheNetAdmin/zjuthesis/releases
-% Discussion : https://github.com/TheNetAdmin/zjuthesis/discussions
-% Documents  : https://thenetadmin.github.io/zjuthesis
-
-% If you have trouble using this template, please:
-%   1. First go through the online documentations mentioned above, to see if 
-%      there're already solutions.
-%   2. Go through GitHub Issue list, to see if there're discussions on similar
-%      problems
-%   3. Open a GitHub Issue to discuss with developers
-%   4. If you don't know how to use GitHub, you can send me an email
-
 \documentclass[
     % Debugging Settings
     PrintFilePath   = false,            % print tex file path for each page
     % Layout Settings
-    TwoSide         = true,             % set to false if don't need empty pages
+    TwoSide         = false,             % 双面打印
     % Thesis Info
-    StudentName     = 姓名,
-    StudentID       = 学号,
-    AdvisorName     = 指导教师,
-    Grade           = 2014,            % only the year, no '级'
-    Major           = 专业,
-    Department      = 学院,
+    StudentName     = 李钧楷,
+    StudentID       = 12036017,
+    AdvisorName     = 朱诗尧,
+    Grade           = 2020,            % only the year, no '级'
+    Major           = 物理学,
+    Department      = 物理学院,
     SubmitDate      = 递交日期,
-    MajorFormat     = general,
-    Degree          = undergraduate,   % 'undergraduate' or 'graduate'
+    MajorFormat     = physics,
+    Degree          = graduate,   % 'undergraduate' or 'graduate'
     Type            = thesis,          % 'thesis'   or 'design'
-    Period          = final,           % 'proposal' or 'paper' or 'final'
+    Period          = paper,           % 'proposal' or 'paper' or 'final'
     BlindReview     = false,           % 'false'    or 'true'
     Language        = chinese,         % 'chinese'  or 'english'
     % Graduate Thesis Info
-    GradLevel       = master,          % 'master' or 'doctor'
-    Topic           = 研究方向,
-    ColaboratorName = 合作导师,
+    GradLevel       = doctor,          % 'master' or 'doctor'
+    Topic           = 拓扑物理,
+    ColaboratorName = 杨兆举,
     % Table of Contents
     ListOfContents  = true,
     ListOfFigures   = true,
     ListOfTables    = true,
     ListOfAlgorithms= false,
     % Title
-    Title           = 毕业论文/设计题目,
-    TitleEng        = {{Graduation Thesis Title}}
+    Title           = 分形拓扑绝缘体研究,
+    TitleEng        = {{Research on fractal topological insulators}}
 ]{zjuthesis}
 
 %% Uncomment the following lines if you need multi line titles on cover pages
@@ -58,109 +43,33 @@
 %% Uncomment the following lines if you need multi line department names on cover pages
 % \departmenttwolines{学院名第一行}{学院名第二行}
 
-\newcommand{\inputundergraduate}
-{
-    \ifthenelse{\equal{\Period}{final}}
-    {
-        % Final thesis
-        % Final part
-        \newcommand{\undergradcurrstage}{final}
-        \newrefsection
-        
-        \coverstyle
-        \inputpage{final}{cover}
-
-        \prevstyle
-        \inputpage{final}{previous}
-        \inputpage{final}{toc}
-
-        \bodystyle
-        \inputpage{final}{cover-part}
-
-        \resetpagecounter{}
-        \inputbody{final/content}
-        \inputbody{final/post}
-
-        \poststyle
-        \inputpage{final}{post}
-
-        % Proposal part
-        \renewcommand{\undergradcurrstage}{proposal}
-        \newrefsection
-
-        \coverstyle
-        \inputpage{proposal}{cover-part}
-        \inputpage{proposal}{cover}
-        \inputpage{proposal}{previous}
-        
-        \bodystyle
-        \inputbody{proposal/content}
-
-        \poststyle
-        \inputpage{proposal}{post}
-    }
-
-    \ifthenelse{\equal{\Period}{proposal}}
-    {
-        % Thesis proposal
-        \newcommand{\undergradcurrstage}{proposal}
-
-        \coverstyle
-        \inputpage{proposal}{cover}
-    
-        % 'proposal' previous part uses 'empty' page style,
-        % as shown in cs undergrad template.
-        \inputpage{proposal}{previous}
-        
-        \prevstyle
-        \inputpage{proposal}{toc}
-    
-        \bodystyle
-        \inputbody{proposal/content}
-        
-        \poststyle
-        \inputpage{proposal}{post}
-    }
-
-    \ifthenelse{\equal{\Period}{paper}}
-    {
-        % paper only part
-        \newcommand{\undergradcurrstage}{paper}
-        \newrefsection
-        
-        \coverstyle
-        \inputpage{final}{cover}
-
-        \prevstyle
-        \inputpage{final}{previous}
-        \inputpage{final}{toc}
-
-        \bodystyle
-        \inputpage{final}{cover-part}
-        \cleardoublepage
-        
-        \inputbody{final/content}
-        \inputbody{final/post}
-
-        \poststyle
-        \inputpage{final}{post}
-    }
-}
+% 调整标题的层级深度
+\setcounter{secnumdepth}{4} % 设置编号深度
+\setcounter{tocdepth}{4}    % 设置目录深度
 
 \newcommand{\inputgraduate}
 {
+    % 封面
     \coverstyle
     \inputpage{cover}
 
+    % 前置部分
     \prevstyle
     \inputpage{previous}
     \inputpage{toc}
     
-    % Main contents
+    % 正文
     \bodystyle
+    \inputbody{Introduction}
+    \inputbody{FractalTopo}
+    \inputbody{Fractal_Haldane_Theory}
+    \inputbody{Fractal_Haldane_Exp}
+    \inputbody{Fractal_HO_Theory}
+    \inputbody{Fractal_HO_Exp}
     \inputbody{content}
+    
 
-    % Post part
+    % 附录部分
     \poststyle
     \inputbody{post}
 }

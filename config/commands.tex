@@ -1,8 +1,9 @@
-% common commands
-
+% 通用命令
+% 如果布尔变量为真，执行 trueAction
 \newcommand{\ifbooltrue}[2]{\ifthenelse{\boolean{#1}}{#2}{}}
 \newcommand{\ifboolfalse}[2]{\ifthenelse{\boolean{#1}}{}{#2}}
 
+% 单双面设置
 \ifthenelse{\equal{\TwoSide}{true}}
 {
     % TwoSide settings
@@ -13,9 +14,11 @@
     \renewcommand{\cleardoublepage}{\clearpage}
 }
 
+% 常用文本修饰命令：加粗和下划线
 \newcommand{\bful}[1]{{\bfseries\uline{#1}}}
 
-% Commands to input body pages
+% body插入命令
+% 本科
 \ifthenelse{\equal{\Degree}{undergraduate}}
 {
     % undergraduate

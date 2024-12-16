@@ -49,16 +49,16 @@
 % Define multi line title
 
 \ifnumcomp{\TitleLines+\TitleEngLines}{=}{5}{
-    \renewcommand{\arraystretch}{0.8}
+    \renewcommand{\arraystretch}{0.2}
 }{
     \ifnumcomp{\TitleLines+\TitleEngLines}{=}{6}{
-        \renewcommand{\arraystretch}{0.65}
+        \renewcommand{\arraystretch}{0.2}
     }
 }
 
 \begin{center}
     \bfseries \zihao{-2}
-    \begin{tabularx}{.8\textwidth}{>{\fangsong}l X<{\centering}}
+    \begin{tabularx}{1\textwidth}{>{\fangsong}l X<{\centering}}
         % If titles are too long for one row, please manually hardcode them in
         % multiple lines, as the english title example here.
         \ifthenelse{\equal{\TitleLines}{1}}
