@@ -22,5 +22,11 @@
             ]
         }
     ],
-    "latex-workshop.latex.outDir": "%DIR%/out"
+    "latex-workshop.latex.outDir": "%DIR%/out",
+    "latex-workshop.latexindent.enabled": true,
+    "latex-workshop.latexindent.args": [
+        "-m", 
+        "-l",
+        "-w"
+    ]
 }
