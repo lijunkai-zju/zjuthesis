@@ -1,25 +1,25 @@
-\chapter{分形BBH模型理论}
-高阶拓扑绝缘体（HOTIs）是一种新近发展的拓扑相，它承载着低维度的更高余维拓扑态，这些态局域在“边界的边界”上\cite{benalcazar2017quantized,langbehn2017reflection,song2017d,schindler2018higher,ezawa2018higher,trifunovic2019higher,xie2021higher}。这类新型拓扑相的诱导机制主要包含两种典型途径：其一是基于Benalcazar-Bernevig-Hughes（BBH）四极子绝缘体模型\cite{benalcazar2017quantized}，该模型具有量子化的体四极矩但体偶极极化为零。由于扩展的高阶体-边界对应原理，二维体系可同时支持0D带隙角态和1D带隙边缘态。另一种经典方法是将1D SSH模型直接推广到更高维度\cite{noh2018topological,ni2019observation,zhang2019second,xue2019acoustic,zhang2020low}。通过改变2D系统中内部和外部跳跃的相对强度，可以诱导出二阶拓扑相，其拓扑不变量是偶极极化，而不是四极矩。得益于人工晶体设计的灵活性，这些方法在过去十年中极大地推动了HOTIs及传统拓扑绝缘体\cite{hasan2010colloquium,qi2011topological}的研究进程。迄今为止，HOTIs在经典波系统中得到了广泛验证，包括光子学\cite{peterson2018quantized,xie2018second,chen2019direct,xie2019visualization,mittal2019photonic,ota2019photonic,el2019corner,he2020quadrupole,zhang2020higher,li2020higher}、声学\cite{serra2018observation,zhang2019dimensional,xue2019realization,qi2020acoustic,xue2020observation,weiner2020demonstration,ni2020demonstration}和电路系统\cite{imhof2018topolectrical,bao2019topoelectrical,zhang2019dimensional,liu2020octupole,zhang2021experimental}等实验平台，并引领了与非厄米性\cite{luo2019higher,gao2021non}、无序\cite{zhang2021experimental,chen2020higher,li2020topological}和非线性\cite{zangeneh2019nonlinear,kirsch2021nonlinear}相互作用等新兴研究领域。
+\chapter{谢宾斯基地毯上的Benalcazar-Bernevig-Hughes模型}
+高阶拓扑绝缘体是一种新近发展的拓扑相，它承载着低维度的更高余维拓扑态，这些态局域在“边界的边界”上\cite{benalcazar2017quantized,langbehn2017reflection,song2017d,schindler2018higher,ezawa2018higher,trifunovic2019higher,xie2021higher}。这类新型拓扑相的诱导机制主要包含两种典型途径：其一是基于Benalcazar-Bernevig-Hughes（BBH）四极子绝缘体模型\cite{benalcazar2017quantized}，该模型具有量子化的体四极矩（Bulk quadrupole）但体偶极极化（Bulk polarization）为零。由于扩展的高阶体-边对应原理，二维体系可同时支持0D带隙角态和1D带隙边缘态。另一种经典方法是将1D SSH模型直接推广到更高维度\cite{noh2018topological,ni2019observation,zhang2019second,xue2019acoustic,zhang2020low}。通过改变2D系统中内部和外部耦合的相对强度，可以诱导出二阶拓扑相，其拓扑不变量是偶极极化，而不是四极矩。得益于人工晶体设计的灵活性，这些方法在过去十年中极大地推动了高阶拓扑绝缘体及传统拓扑绝缘体\cite{hasan2010colloquium,qi2011topological}的研究进程。迄今为止，高阶拓扑绝缘体在经典波系统中得到了广泛验证，包括光子学\cite{peterson2018quantized,xie2018second,chen2019direct,xie2019visualization,mittal2019photonic,ota2019photonic,el2019corner,he2020quadrupole,zhang2020higher,li2020higher}、声学\cite{serra2018observation,zhang2019dimensional,xue2019realization,qi2020acoustic,xue2020observation,weiner2020demonstration,ni2020demonstration}和电路系统\cite{imhof2018topolectrical,bao2019topoelectrical,zhang2019dimensional,liu2020octupole,zhang2021experimental}等实验平台，并引领了与非厄米性\cite{luo2019higher,gao2021non}、无序\cite{zhang2021experimental,chen2020higher,li2020topological}和非线性\cite{zangeneh2019nonlinear,kirsch2021nonlinear}相互作用等新兴研究领域。
 
-另一方面，分形体系中的拓扑态研究也取得了显著进展\cite{song2014topological,iliasov2020hall,fremling2020existence,yang2020photonic}，分形结构以其独特的自相似性和分数维度特征\cite{mandelbrot1967coast}，为探索新型拓扑物态提供了新的平台。近期研究表明，具有外角和内角模式的量子分形中可能存在高阶拓扑相\cite{pai2019topological,manna2022higher}，这为分形与HOTIs的交叉研究架起了桥梁。然而，高阶拓扑相与分形晶格的相互作用机制仍处于初期探索阶段。
+另一方面，分形体系中的拓扑态研究也取得了显著进展\cite{song2014topological,iliasov2020hall,fremling2020existence,yang2020photonic}，分形结构以其独特的自相似性和分数维度特征\cite{mandelbrot1967coast}，为探索新型拓扑物态提供了新的平台。近期研究表明，具有外角和内角模式的量子分形中可能存在高阶拓扑相\cite{pai2019topological,manna2022higher}，这为分形与高阶拓扑绝缘体的交叉研究架起了桥梁。然而，高阶拓扑相与分形晶格的相互作用机制仍处于初期探索阶段。
 
-在本章，笔者实现了一个分形晶格的高阶拓扑相。本文将 BBH 模型应用于1.89 维 Sierpinski 地毯。基于实空间多体多极算符\cite{wheeler2019many,kang2019many}计算了相图的相图计算表明，分形特性使四极子相的非平庸区域压缩了0.35倍。在拓扑相区域内，精确对角化哈密顿量得到的能谱呈现出分形“蝴蝶”结构，包含丰富的外角态和不同的内角态。通过分数量子化电荷计算\cite{li2020fractional,peterson2021trapped,liu2021bulk}，我们证实了外角态和内角态均具有拓扑非平庸特性。通过遍历所有晶格点，我们发现了外角和内角处丰富的拓扑角态，其维度分别对应于 0 和 1.89。角态的分数维度此前从未被报道，因此使得我们的分形拓扑绝缘体与传统拓扑绝缘体明显不同。
+在本章，笔者实现了一个分形晶格的高阶拓扑相。本文将 BBH 模型应用于1.89 维 Sierpinski 地毯。基于实空间多体多极算符\cite{wheeler2019many,kang2019many}计算的相图计算表明，分形特性使四极子相的非平庸区域压缩了0.35倍。在拓扑相区域内，精确对角化哈密顿量得到的能谱呈现出分形“蝴蝶”结构，包含丰富的外角态和不同的内角态。通过对量子化的分数电荷计算\cite{li2020fractional,peterson2021trapped,liu2021bulk}，我们证实了外角态和内角态均具有拓扑非平庸特性。通过遍历所有晶格点，我们发现了外角和内角处丰富的拓扑角态，其维度分别对应于 0 和 1.89。角态的分数维度此前从未被报道，因此使得我们的分形拓扑绝缘体与传统拓扑绝缘体明显不同。
 \section{分形BBH模型的紧束缚模型}
 \subsection{分形晶格与BBH模型的哈密顿量}
 本文采用的承载高阶拓扑绝缘体的分形晶格为Sierpinski地毯，如图\ref{fig:Generation}所示。晶格由一个四格点的正方形为基本单元，通过迭代生成。
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.75\linewidth]{figure/HOTITheo/Generation.png}
-    \caption{分形晶格的迭代生成}分形晶格及拓扑态的维度。晶格的最小元胞包含四个原子（黑点）。Sierpinski 地毯的第 \( n \) 代 G(n) 由 G(n-1) 的八个副本组成。紫色、红色、黄色和蓝色框分别表示外角、内角、边缘和“体”格点。
+    \caption{分形晶格的迭代生成。分形晶格及拓扑态的维度。晶格的最小元胞包含四个原子（黑点）。Sierpinski 地毯的第 \( n \) 代 G(n) 由 G(n-1) 的八个副本组成。紫色、红色、黄色和蓝色框分别表示外角、内角、边缘和“体”格点。}
     \label{fig:Generation}
 \end{figure}
 
-我们基于Sierpinski地毯的分形模型如图\ref{fig:HOTIlattice}(a)所示。最小原胞由BBH模型的晶胞构成，如图\ref{fig:HOTIlattice}(b)所示。细线和粗线分别表示内部跳跃$t_1$和外部跳跃$t_2$，红色（绿色）线表示正（负）耦合，从而可以为每个格子引入有效的磁通量$\phi=\pi$。
+我们基于Sierpinski地毯的分形模型如图\ref{fig:HOTIlattice}(a)所示。最小原胞由BBH模型的晶胞构成，如图\ref{fig:HOTIlattice}(b)所示。细线和粗线分别表示内部耦合$t_1$和外部耦合$t_2$，红色（绿色）线表示正（负）耦合，从而可以为每个格子引入有效的磁通量$\phi=\pi$。
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\linewidth]{figure/HOTITheo/HOTIlattice.png}
-    \caption{分形晶格与耦合}(a) 分形Sierpinski地毯的示意图。细线（粗线）表示强度为内部（外部）跳跃$t_1$（$t_2$）的跳跃，而红色（绿色）线表示正（负）跳跃。虚线框的放大视图如图(b)所示。
+    \caption{分形晶格与耦合。(a) 分形Sierpinski地毯的示意图。细线（粗线）表示强度为内部（外部）耦合$t_1$（$t_2$）的耦合，而红色（绿色）线表示正（负）耦合。虚线框的放大视图如图(b)所示。}
     \label{fig:HOTIlattice}
 \end{figure}
 
@@ -34,9 +34,9 @@ H_\text{intra} = & \, t_1 (\sigma_x \otimes I + I \otimes \tau_x + \sigma_y \oti
 H_\text{inter} = & \, t_2 (\sigma_x \otimes I + I \otimes \tau_x + \sigma_y \otimes \tau_y).
 \end{aligned}
 \end{equation}
-其中，\( \hat{c}_i^\dagger \)（\( \hat{c}_i \)）为位于第 \( i \) 站点的产生（湮灭）算符，如图 1(a) 所示。矩阵 \( H_{\text{intra}} \)（\( H_{\text{inter}} \)）分别描述了 BBH 模型中的站点内跳跃和站点间跳跃。
+其中，\( \hat{c}_i^\dagger \)（\( \hat{c}_i \)）为位于第 \( i \) 站点的产生（湮灭）算符，如图 1(a) 所示。矩阵 \( H_{\text{intra}} \)（\( H_{\text{inter}} \)）分别描述了 BBH 模型中的胞内耦合和胞间耦合。
 
-为了产生量子化的四极矩，需要对站点内跳跃和站点间跳跃进行偶极化耦合，这些跳跃由 \( t_1 \) 和 \( t_2 \) 表示。在我们的分形模型中，该系统保持了时间反演对称性、粒子-空穴对称性和手性对称性，但破坏了平移对称性。
+为了产生量子化的四极矩，需要对胞内耦合和胞间耦合进行差异化耦合，这些耦合由 \( t_1 \) 和 \( t_2 \) 表示。在我们的分形模型中，该系统保持了时间反演对称性、粒子-空穴对称性和手性对称性，但破坏了平移对称性。
 
 \subsection{BBH模型的拓扑不变量}
 在一阶拓扑绝缘体中，拓扑不变量起源于Berry相位的奇点。而高阶拓扑绝缘体的拓扑来源于拓展的高阶Berry相。高阶 Berry 相位是拓扑物理中研究高阶拓扑绝缘体的重要工具之一。它扩展了标准 Berry 相位的概念，用于刻画高阶拓扑不变量，例如四极子（quadrupole）、八极子（octupole）拓扑相等。
@@ -81,14 +81,14 @@ Q_{xy} = \frac{1}{2\pi} \text{Im} \log \left[ \det \left( U^\dagger \hat{Q} U \r
 
 
 \section{分形能谱和拓扑态}
-在能带拓扑体系中，系统哈密顿量的能谱反应了系统的拓扑性质。系统能隙的打开再开启表明了拓扑相变的位置，此外实空间特征值中，能带中心还会出现相应的拓扑局域态。在本节，笔者计算了谢宾斯基地毯晶格BBH模型的能谱随内部跳跃$t_1$的变化，并将结果展示在图\ref{fig:HOTISpec}(a, b)中。灰色和蓝色曲线分别表示“体态”（晶格内部）和边缘态，这与整数维系统中HOTI的情况相似。在\ref{fig:HOTISpec}(b)中，大量角态在能量谱中心（$t_1=0$和$E=0$）相交，并形成分形“蝴蝶”状，这与基于BBH模型的传统HOTI有根本区别。红线表示外部角态，它们在$t_1=-0.35$到$t_1=0.35$范围内简并，其表明了系统的拓扑相区域，如图\ref{fig:HOTISpec}(c)所示。黄色和绿色曲线分别表示两种不同类型的内角态A和B。为简化起见，本章中外部跳跃强度$t_2$设为1。在图\ref{fig:HOTISpec}中，我们用蓝色阴影标记了拓扑相区域。
+在能带拓扑体系中，系统哈密顿量的能谱反应了系统的拓扑性质。系统能隙的闭合再开启表明了拓扑相变的位置。此外实空间特征值中，能带中心还会出现相应的拓扑局域态。在本节，笔者计算了谢宾斯基地毯晶格BBH模型的能谱随内部耦合$t_1$的变化，并将结果展示在图\ref{fig:HOTISpec}(a, b)中。灰色和蓝色曲线分别表示“体态”（晶格内部）和边缘态，这与整数维系统中高阶拓扑绝缘体的情况相似。在\ref{fig:HOTISpec}(b)中，大量角态在能量谱中心（$t_1=0$和$E=0$）相交，并形成分形“蝴蝶”状，这与基于BBH模型的传统高阶拓扑绝缘体有根本区别。红线表示外部角态，它们在$t_1=-0.35$到$t_1=0.35$范围内简并，其表明了系统的拓扑相区域，如图\ref{fig:HOTISpec}(c)所示。黄色和绿色曲线分别表示两种不同类型的内角态A和B。为简化起见，本章中外部耦合强度$t_2$设为1。在图\ref{fig:HOTISpec}中，我们用蓝色阴影标记了拓扑相区域。
 
 拓扑相变的一个重要特征是能带的闭合和重新打开。在高阶拓扑绝缘体中，其体现为边缘哈密顿量的能隙关闭再打开。然而，再图\ref{fig:HOTISpec}(a)中，尽管其在$t_1=-0.35$和$t_1=0.35$两点距离最近，对应着拓扑相变的位置，但蓝色的边缘态能隙并未彻底关闭。一方面，由于维度的降低，体态数量的减少导致拓扑相变期间能隙的打开。另一方面，内角态B[图\ref{fig:HOTISpec}(g)]不被晶格的边缘隔开，因此其可能无需边缘态带隙的闭合再打开。从灰色（体态）和蓝色（边缘态）曲线可以看出，在相变期间，能量间隙在-0.9到0.9范围内仍然存在，这使得我们的分形模型与二维BBH模型显著不同。
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\linewidth]{figure/HOTITheo/HOTISpec.png}
-    \caption{分形能谱与拓扑态}(a) 能量谱随内部跳跃$t_1$的变化，其中$t_2=1$。灰色和蓝色曲线分别表示体态和边缘态，而红色、黄色和绿色曲线分别表示外部角态、内部角态A和B。(b) 图(a)中虚线框内分形“蝴蝶”的放大视图。分形晶格中的拓扑态。(c) 固定$t_1/t_2=0.13$时的能量谱，对应于(a)中蓝色虚线。(d)角态的放大视图，对应于(c)中虚线框。(e-h) 外部角态、内部角态A、B以及边缘态的总空间分布。
+    \caption{分形能谱与拓扑态。(a) 能量谱随内部耦合$t_1$的变化，其中$t_2=1$。灰色和蓝色曲线分别表示体态和边缘态，而红色、黄色和绿色曲线分别表示外部角态、内部角态A和B。(b) 图(a)中虚线框内分形“蝴蝶”的放大视图。分形晶格中的拓扑态。(c) 固定$t_1/t_2=0.13$时的能量谱，对应于(a)中蓝色虚线。(d)角态的放大视图，对应于(c)中虚线框。(e-h) 外部角态、内部角态A、B以及边缘态的总空间分布。}
     \label{fig:HOTISpec}
 \end{figure}
 
@@ -100,28 +100,28 @@ Q_{xy} = \frac{1}{2\pi} \text{Im} \log \left[ \det \left( U^\dagger \hat{Q} U \r
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.75\linewidth]{figure/HOTITheo/Elemen.png}
-    \caption{分形晶格中基本单元在 \( t_1=0 \) 时的本征态}(a-d) 分别展示了单体、二聚体、三聚体和四聚体在外角、边缘、内角和“体”区域的本征值与本征向量。红色（绿色）线表示正（负）跃迁。插图：\( t_1=0 \) 时的分形晶格结构。
+    \caption{分形晶格中基本单元在 \( t_1=0 \) 时的本征态。(a-d) 分别展示了单体、二聚体、三聚体和四聚体在外角、边缘、内角和“体”区域的本征值与本征向量。红色（绿色）线表示正（负）跃迁。插图：\( t_1=0 \) 时的分形晶格结构。}
     \label{fig:Elemen}
 \end{figure}
 
-在图\ref{fig:Elemen}(a)中，我们描绘了能量为零的单体的本征矢，其对应于外部角态。二聚体则出现于边缘态，如图\ref{fig:Elemen}(b)所示。由于其同时支持键合态和反键合态，两个二聚体的本征矢可以相互交换。类似地，在图\ref{fig:Elemen}(c)中，三聚体也具有两种不同类型的空间分布，并且可以表现出不同的内部角态，其本征值为$±t_2$和0。 本征值为$E=±t_2$的内角态是对称本征态，而本征值为$E=0$内角态是反对称态。我们还在图\ref{fig:Elemen}(d)中展示了四聚体的本征值和本征矢，它们贡献于“体态”。需要注意的是，由于四聚体和三聚体的本征值都分布在$E=±\sqrt{2}t_2$处，基于三聚体的内部角态在$t_1$有限时与“体态”混合，无法直接观察到。
+在图\ref{fig:Elemen}(a)中，我们描绘了能量为零的单体的本征模式分布，其对应于外部角态。二聚体则出现于边缘态，如图\ref{fig:Elemen}(b)所示。由于其同时支持键合态和反键合态，两个二聚体的本征矢可以相互交换。类似地，在图\ref{fig:Elemen}(c)中，三聚体也具有两种不同类型的空间分布，并且可以表现出不同的内部角态，其本征值分别为$E=±t_2$和$E=0$。 本征值为$E=±t_2$的内角态是对称本征态，而本征值为$E=0$内角态是反对称态。我们还在图\ref{fig:Elemen}(d)中展示了四聚体的本征值和本征矢，它们贡献于“体态”。需要注意的是，由于四聚体和三聚体的本征值都分布在$E=±\sqrt{2}t_2$处，基于三聚体的内部角态在$t_1$有限时与“体态”混合，无法直接观察到。
 
-首先，我们设定 \( t_1/t_2=0.13 \) 并在图\ref{fig:MixElem}(a) 中展示其能谱。接着，我们在图\ref{fig:MixElem}(b) 中绘制状态编号 68 的空间分布。需要注意的是，我们只能找到一个混合态，其概率分布同时出现在内角和“体”区域，而不像图\ref{fig:Elemen}中分别呈现的三聚体与四聚体模式。此外，我们在图\ref{fig:MixElem}(c) 中展示了“体”态的总分布。这些结果表明，在我们的分形模型中，三聚体与四聚体模式发生混合，无法被单独区分。
+首先，我们设定 \( t_1/t_2=0.13 \) 并在图\ref{fig:MixElem}(a) 中展示其能谱。接着，我们在图\ref{fig:MixElem}(b) 中绘制状态编号 68 的空间分布。需要注意的是，我们只能找到一个混合态，其模式分布同时出现在内角和“体”区域，而不像图\ref{fig:Elemen}中分别呈现的三聚体与四聚体模式。此外，我们在图\ref{fig:MixElem}(c) 中展示了“体”态的总分布。这些结果表明，在我们的分形模型中，三聚体与四聚体模式发生混合，无法被单独区分。
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.6\linewidth]{figure/HOTITheo/MixElem.png}
-    \caption{在 \( t_1 \neq 0 \) 时三聚体与四聚体模式的混合}(a) 当 \( t_1/t_2=0.13 \) 时的能谱。(b) 状态编号 68 的空间分布，对应于 (a) 中黑色箭头指示的状态。(c) “体”态的总分布，对应于 (a) 中黑色框内的灰色点。
+    \caption{在 \( t_1 \neq 0 \) 时三聚体与四聚体模式的混合。(a) 当 \( t_1/t_2=0.13 \) 时的能谱。(b) 状态编号 68 的空间分布，对应于 (a) 中黑色箭头指示的状态。(c) “体”态的总分布，对应于 (a) 中黑色框内的灰色点。}
     \label{fig:MixElem}
 \end{figure}
 
 \subsection{G（3）晶格的能谱与拓扑态}
-在前文中，我们采用 G(2) 分形晶格进行研究。在此，图\ref{fig:G2Spec}(a) 显示了 G(3) 晶格的能谱及其场分布，作为站点内跃迁 \( t_1 \) 的函数，表明存在更复杂的分形“蝴蝶”结构。
+在前文中，我们采用 G(2) 分形晶格进行研究。在此，图\ref{fig:G2Spec}(a) 显示了 G(3) 晶格的能谱，作为胞内跃迁 \( t_1 \) 的函数，表明存在更复杂的分形“蝴蝶”结构。
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.75\linewidth]{figure/HOTITheo/G2Spec.png}
-    \caption{G(3) 晶格的能谱}(a) 能谱作为站点内跃迁 \( t_1 \) 的函数。红色、粉色、黄色和绿色线分别表示外角态、内角态 A、内角态 B 和内角态 C。蓝色（灰色）线分别表示边缘态（“体”态）。(b-d) 在 \( t_1=0.1 \) 时的能谱。
+    \caption{G(3) 晶格的能谱。(a) 能谱作为胞内跃迁 \( t_1 \) 的函数。红色、粉色、黄色和绿色线分别表示外角态、内角态 A、内角态 B 和内角态 C。蓝色（灰色）线分别表示边缘态（“体”态）。(b-d) 在 \( t_1=0.1 \) 时的能谱。}
     \label{fig:G2Spec}
 \end{figure}
 
@@ -134,7 +134,7 @@ Q_{xy} = \frac{1}{2\pi} \text{Im} \log \left[ \det \left( U^\dagger \hat{Q} U \r
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\linewidth]{figure/HOTITheo/G2Field.png}
-    \caption{G(3)晶格拓扑态}外角态与标记为 A、B、C 的内角态的总空间分布。
+    \caption{G(3)晶格拓扑态。外角态与标记为 A、B、C 的内角态的总空间分布。}
     \label{fig:G2Field}
 \end{figure}
 
@@ -142,20 +142,22 @@ Q_{xy} = \frac{1}{2\pi} \text{Im} \log \left[ \det \left( U^\dagger \hat{Q} U \r
 作为对比，我们计算了二维方形晶格的BBH模型结果。有限尺寸的方形晶格示意图如图\ref{fig:HOTISpec}(a)所示。计算得到的能量谱随$t_1$的变化如图\ref{fig:HOTISpec}(b, c)所示。其中(b)中晶格尺寸为$L=9$，其与G(2)晶格同尺寸，(c)中晶格尺寸为$L=27$，其与G(3)晶格同尺寸。与分形晶格不同，二维晶格的能量间隙中仅存在四个角态（红线）。
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.75\linewidth]{figure/HOTITheo/2DSpec.png}
-    \caption{方形晶格中的能谱}(a) 方形晶格的示意图。(b, c) 能量谱随内部跳跃$t_1$的变化。(b) $L=9$, (c) $L=27$。
+    \includegraphics[width=0.85\linewidth]{figure/HOTITheo/2DSpec.png}
+    \caption{方形晶格中的能谱。(a) 方形晶格的示意图。(b, c) 能量谱随内部耦合$t_1$的变化。(b) $L=9$, (c) $L=27$。}
     \label{fig:2DSpec}
 \end{figure}
+
+可以发现随着二维晶格的尺寸增加，$t_1=\pm1$处由边缘态标记的拓扑带隙在逐渐关闭。这表明该处的带隙是一种有限尺度效应。与之形成鲜明反差的是分形晶格尺度增加时的表现。在图\ref{fig:G2Spec}(a) 中，尽管晶格由G(2)转变为G(3)，此时能隙并未出现缩小的迹象。这表明本文的分形晶格具有独特的不依赖于边缘能隙的拓扑。这种独特的性质可能来源于G(1)代的内角态。由于G(1)代的内角态直接连接，不存在边缘态，这导致了其不具有相应的边缘哈密顿量，相应的也不需要边缘带隙的闭合再开启。
 
 \subsection{拓扑鲁棒性}
 为了研究拓扑态的稳健性，我们计算了二维晶格和分形晶格（均处于高阶拓扑相）中拓扑不变量和能谱随无序强度$ 2\sigma $的变化关系。无序按照高斯分布分布，其标准差为 $ \sigma $。
 
-首先，我们在 $ y $ 方向的站点内跃迁中引入手性无序（即相关无序），这一方法已在先前研究中被采用\cite{li2020topological}。如图\ref{fig:Disorder}(a, b) 所示，对于二维方形晶格，经过 1000 次无序实现后的平均四极矩在无序强度 \( 2\sigma = 1.3 \) 处开始下降。而对于分形晶格，平均四极矩的下降发生得更早。因此，如图\ref{fig:Disorder}(c, d) 所示，分形晶格中的角态更早地与“体”态混合，这表明分形晶格中高阶角态的拓扑保护强度较弱。
+首先，我们在 $ y $ 方向的胞内跃迁中引入手性无序（即相关无序），这一方法已在先前研究中被采用\cite{li2020topological}。如图\ref{fig:Disorder}(a, b) 所示，对于二维方形晶格，经过 1000 次无序实现后的平均四极矩在无序强度 \( 2\sigma = 1.3 \) 处开始下降。而对于分形晶格，平均四极矩的下降发生得更早。因此，如图\ref{fig:Disorder}(c, d) 所示，分形晶格中的角态更早地与“体”态混合，这表明分形晶格中高阶角态的拓扑保护强度较弱。
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\linewidth]{figure/HOTITheo/Disorder.png}
-    \caption{拓扑鲁棒性}(a, b) 方形晶格 (a, c) 和分形晶格 (b, d) 中的四极矩与能谱随手性无序强度的变化关系。手性无序被引入到$y$方向的站点内跃迁中。(e, f) 方形晶格 (e) 和分形晶格 (f) 中的能谱随非手性无序强度的变化关系。非手性无序被添加到现场势中。(g, h) 在 (e, f) 中黑色虚线标记的无序强度下，角局域态的场分布。(c, e) 中的红色点表示四个角局域态。(d, f) 中的黄色和红色点分别表示外角态和内角态。所有结果均基于 1000 次无序实现的平均值。
+    \caption{拓扑鲁棒性。(a, b) 方形晶格 (a, c) 和分形晶格 (b, d) 中的四极矩与能谱随手性无序强度的变化关系。手性无序被引入到$y$方向的胞内跃迁中。(e, f) 方形晶格 (e) 和分形晶格 (f) 中的能谱随非手性无序强度的变化关系。非手性无序被添加到现场势中。(g, h) 在 (e, f) 中黑色虚线标记的无序强度下，角局域态的场分布。(c, e) 中的红色点表示四个角局域态。(d, f) 中的黄色和红色点分别表示外角态和内角态。所有结果均基于 1000 次无序实现的平均值。}
     \label{fig:Disorder}
 \end{figure}
 
@@ -169,7 +171,7 @@ Q_{xy} = \frac{1}{2\pi} \text{Im} \log \left[ \det \left( U^\dagger \hat{Q} U \r
 D = \lim_{n \to \infty} \frac{\ln (N)}{\ln (N_l)}
 \label{eq:BoxCounting}
 \end{equation}
-其中，\( N \) 表示晶格站点或拓扑态的数量，\( N_l \) 表示单边的站点数。对于每一次迭代生成，相应的盒数如表\ref{tab:Generation}所示。在图\ref{fig:Dimension}中，我们绘制了不同代数 \( G(n) \) 下，\( \ln N / \ln N_l \) 随迭代次数变化的曲线，分别对应内角态、外角态、边缘态和整个晶格。
+其中，\( N \) 表示晶格站点或拓扑态的数量，\( N_l \) 表示单边的站点数。对于每一次迭代生成，相应的盒数如表\ref{tab:Generation}所示。在图\ref{fig:HOTIDimension}中，我们绘制了不同代数 \( G(n) \) 下，\( \ln N / \ln N_l \) 随迭代次数变化的曲线，分别对应内角态、外角态、边缘态和整个晶格。
 
 \begin{table}[htbp]
     \centering
@@ -188,15 +190,15 @@ D = \lim_{n \to \infty} \frac{\ln (N)}{\ln (N_l)}
         边缘态盒数 \(N_e\) & 16 & 80 & 400 & \(8 \times (3^n - 1) + \sum_{i=1}^{n-1} (3^i - 1) \times 8^{n-i}\) \\
         \hline
     \end{tabular}
-    \caption{分形晶格每次迭代所对应的盒数}在每次迭代中，总盒数 \( N_s \) 包括所有覆盖 Sierpinski 地毯的盒子，而横向盒数 \( N_l \) 表示分形晶格单边上的盒子数。盒数 \( N_o \)、\( N_i \) 和 \( N_e \) 分别对应于外角态、内角态和边缘态。
+    \caption{分形晶格每次迭代所对应的盒数。在每次迭代中，总盒数 \( N_s \) 包括所有覆盖 Sierpinski 地毯的盒子，而横向盒数 \( N_l \) 表示分形晶格单边上的盒子数。盒数 \( N_o \)、\( N_i \) 和 \( N_e \) 分别对应于外角态、内角态和边缘态。}
 \label{tab:Generation}
 \end{table}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\linewidth]{figure/HOTITheo/Dimension.png}
-    \caption{拓扑态维度}外角态、内角态、边缘态及分形晶格的维度随迭代代数的变化关系。
-    \label{fig:Dimension}
+    \caption{拓扑态维度。外角态、内角态、边缘态及分形晶格的维度随迭代代数的变化关系。}
+    \label{fig:HOTIDimension}
 \end{figure}
 
 为了计算分形晶格、角态和边缘态的维度，我们采用盒计数法。将每次迭代的盒数代入公式\ref{eq:BoxCounting}本章采用的谢宾斯基地毯分形晶格的维度$D_s$可以计算为：
@@ -204,11 +206,11 @@ D = \lim_{n \to \infty} \frac{\ln (N)}{\ln (N_l)}
 \begin{equation}
 D_s = \lim_{n \to \infty} \frac{\ln (N_s)}{\ln (N_l)} = \lim_{n \to \infty} \frac{\ln 4 \times 8^n}{\ln 2 \times 3^n} = \frac{\ln 8}{\ln 3} \approx 1.89
 \end{equation}
-可以看到，在图\ref{fig:Dimension}中，灰色的点对应了晶格的计算结果，随着迭代增加，其逐渐趋于$D=\log_38$的虚线。类似的，我们继续计算外角态的维度$D_{oc}$：
+可以看到，在图\ref{fig:HOTIDimension}中，灰色的点对应了晶格的计算结果，随着迭代增加，其逐渐趋于$D=\log_38$的虚线。类似的，我们继续计算外角态的维度$D_{oc}$：
 \begin{equation}
 D_{oc} = \lim_{n \to \infty} \frac{\ln (N_c)}{\ln (N_l)} = \lim_{n \to \infty} \frac{\ln 4}{\ln 2 \times 3^n} = 0
 \end{equation}
-可以观察到，在图\ref{fig:Dimension}中，随着代数的增加，外角态的维度$D_{oc}$趋近于 0（绿色点）。结合 1.89 维晶格（灰色点），我们得出余维数为 1.89，因此外角态的结果对应于一个分数阶拓扑绝缘体。
+可以观察到，在图\ref{fig:HOTIDimension}中，随着代数的增加，外角态的维度$D_{oc}$趋近于 0（绿色点）。结合 1.89 维晶格（灰色点），我们得出余维数为 1.89，因此外角态的结果对应于一个分数阶拓扑绝缘体。
 
 内角态$D_{ic}$和边缘态$D_e$的结果则与外角态非常不同：
 \begin{equation}
@@ -235,12 +237,12 @@ r_{\text{bulk}} = 1 - r_{\text{inner corner}} - r_{\text{edge}} = \frac{3}{5}
 
 \section{压缩的拓扑相图}
 \subsection{分形晶格的拓扑相图}
-如图\ref{fig:Quadrupole}所示，我们系统研究了四极矩序参量$Q_{xy}$在分形晶格（红色数据点）与常规二维方晶格（灰色数据点）中随胞内跳跃参数$t_1$的演化规律。值得注意的是，分形晶格体系展现出独特的拓扑响应特征：当$t_1$跨越临界值$\pm 0.35$时，$Q_{xy}$发生量子化跃迁，从零值突变为$0.5$，并在区间$-0.35 < t_1 < 0.35$内保持稳定的平台值。这与传统二维体系（灰色虚线）的连续渐变行为形成鲜明对比，证实分形几何导致拓扑非平庸区域发生显著压缩，该现象可能与Hausdorff维度（$d_h \approx 1.89$）引起的量子限域效应密切相关。
+如图\ref{fig:Quadrupole}所示，我们系统研究了四极矩序参量$Q_{xy}$在分形晶格（红色数据点）与常规二维方晶格（灰色数据点）中随胞内耦合参数$t_1$的演化规律。值得注意的是，分形晶格体系展现出独特的拓扑响应特征：当$t_1$跨越临界值$\pm 0.35$时，$Q_{xy}$发生量子化跃迁，从零值突变为$0.5$，并在区间$-0.35 < t_1 < 0.35$内保持稳定的平台值。这与传统二维体系（灰色虚线）的连续渐变行为形成鲜明对比，证实分形几何导致拓扑非平庸区域发生显著压缩，该现象可能与Hausdorff维度（$d_h \approx 1.89$）引起的对称性破缺密切相关。
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\linewidth]{figure/HOTITheo/Quadrupole.png}
-    \caption{压缩的拓扑相图}灰色与红色点代表2维晶格和分形晶格的四极矩。蓝色区域标记为分形晶格的拓扑区域。
+    \caption{压缩的拓扑相图。灰色与红色点代表2维晶格和分形晶格的四极矩。蓝色区域标记为分形晶格的拓扑区域。}
     \label{fig:Quadrupole}
 \end{figure}
 
@@ -254,7 +256,7 @@ r_{\text{bulk}} = 1 - r_{\text{inner corner}} - r_{\text{edge}} = \frac{3}{5}
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.75\linewidth]{figure/HOTITheo/Transition.png}
-    \caption{分形晶格中的非平庸态与平庸态}(a-c) 分别为$t_1/t_2=0.1$、$t_1/t_2=0.8$和$t_1/t_2=1.1236$时的能量谱。(d-f) 在$t_1/t_2=0.1$、$t_1/t_2=0.8$和$t_1/t_2=1.1236$时，第129号和第133号态的场分布。晶格间跳跃$t_2$设为1。
+    \caption{分形晶格中的非平庸态与平庸态。(a-c) 分别为$t_1/t_2=0.1$、$t_1/t_2=0.8$和$t_1/t_2=1.1236$时的能量谱。(d-f) 在$t_1/t_2=0.1$、$t_1/t_2=0.8$和$t_1/t_2=1.1236$时，第129号和第133号态的场分布。晶格间耦合$t_2$设为1。}
     \label{fig:Transition}
 \end{figure}
 
@@ -269,7 +271,7 @@ r_{\text{bulk}} = 1 - r_{\text{inner corner}} - r_{\text{edge}} = \frac{3}{5}
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\linewidth]{figure/HOTITheo/G3Qxy.png}
-    \caption{不同代数分形晶格的拓扑相图}(a, b) 分别为 G(2) 和 G(3) 代的分形晶格。(c, d) 对应于 (a, b) 的实空间拓扑不变量 \( Q_{xy} \) 随站点内跃迁 \( t_1 \) 变化的关系。
+    \caption{不同代数分形晶格的拓扑相图。(a, b) 分别为 G(2) 和 G(3) 代的分形晶格。(c, d) 对应于 (a, b) 的实空间拓扑不变量 \( Q_{xy} \) 随胞内跃迁 \( t_1 \) 变化的关系。}
     \label{fig:G3Qxy}
 \end{figure}
 
@@ -285,18 +287,18 @@ r_{\text{bulk}} = 1 - r_{\text{inner corner}} - r_{\text{edge}} = \frac{3}{5}
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\linewidth]{figure/HOTITheo/Reason.png}
-    \caption{具有不同空隙数量的方形晶格的拓扑相图}(a-d) 晶格结构示意图。(e-h) 随着空隙数量增加而收缩的拓扑区域。(d) 对应于第三代 Sierpinski 地毯。
+    \caption{具有不同空隙数量的方形晶格的拓扑相图。(a-d) 晶格结构示意图。(e-h) 随着空隙数量增加而收缩的拓扑区域。(d) 对应于第三代 Sierpinski 地毯。}
     \label{fig:Reason}
 \end{figure}
 
 然而，一个自然的问题出现：如果空隙在二维晶格中是随机分布的会发生什么？为了解决这个问题，我们研究了一个平面方形晶格，并随机移除了 68 个站点。结果表明，该去除部分站点的方形晶格剩余 256 个站点，与 G(2) 代的分形模型站点数相同。
 
-对于特定的实现，我们在 \( t_1 = 0.1 \) 时绘制了能谱，如图\ref{fig:RandDel}(a) 所示。需要注意的是，在分形模型中，不同类型角态之间的能隙消失，并在能量 \( 0 \) 处出现一系列简并态。随后，我们计算了实空间拓扑不变量 \( Q_{xy} \) 随站点内跃迁 \( t_1 \) 变化的关系，并将结果展示在图\ref{fig:RandDel}(b) 中。可以看到，拓扑不变量 \( Q_{xy} \) 不再被量子化，这意味着该系统不是拓扑的。
+对于特定的实现，我们在 \( t_1 = 0.1 \) 时绘制了能谱，如图\ref{fig:RandDel}(a) 所示。需要注意的是，在分形模型中，不同类型角态之间的能隙消失，并在能量 \( 0 \) 处出现一系列简并态。随后，我们计算了实空间拓扑不变量 \( Q_{xy} \) 随胞内跃迁 \( t_1 \) 变化的关系，并将结果展示在图\ref{fig:RandDel}(b) 中。可以看到，拓扑不变量 \( Q_{xy} \) 不再被量子化，这意味着该系统不是拓扑的。
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\linewidth]{figure/HOTITheo/RandDel.png}
-    \caption{在方形晶格中随机删除站点}(a) 当 \( t_1=0.1 \) 时的能谱，其中方形晶格随机移除了 68 个站点。(b) 实空间拓扑不变量 \( Q_{xy} \) 随站点内跃迁 \( t_1 \) 变化的关系。(c) 在特定随机晶格实现中，编号 129 态的场分布。
+    \caption{在方形晶格中随机删除站点。(a) 当 \( t_1=0.1 \) 时的能谱，其中方形晶格随机移除了 68 个站点。(b) 实空间拓扑不变量 \( Q_{xy} \) 随胞内跃迁 \( t_1 \) 变化的关系。(c) 在特定随机晶格实现中，编号 129 态的场分布。}
     \label{fig:RandDel}
 \end{figure}
 
@@ -310,11 +312,11 @@ r_{\text{bulk}} = 1 - r_{\text{inner corner}} - r_{\text{edge}} = \frac{3}{5}
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\linewidth]{figure/HOTITheo/Fractional.png}
-    \caption{分数谱电荷}(a, b) 方形晶格与分形晶格的谱电荷。每个框覆盖一个单元格，其颜色表示电荷数。红色、蓝色、黄色、绿色和灰色框分别表示电荷数为 0.5、1、1.25、1.5 和 2。白色、紫色和黑色点分别对应晶格中的角态、边缘态和“体”态。(c) 外角态、内角态 A 和内角态 B 的电荷随站点内跃迁 \( t_1 \) 在 -2 至 2 范围内的变化关系，固定 \( t_2 = 1 \)。
+    \caption{分数谱电荷。(a, b) 方形晶格与分形晶格的谱电荷。每个框覆盖一个单元格，其颜色表示电荷数。红色、蓝色、黄色、绿色和灰色框分别表示电荷数为 0.5、1、1.25、1.5 和 2。白色、紫色和黑色点分别对应晶格中的角态、边缘态和“体”态。(c) 外角态、内角态 A 和内角态 B 的电荷随胞内跃迁 \( t_1 \) 在 -2 至 2 范围内的变化关系，固定 \( t_2 = 1 \)。}
     \label{fig:Fractional}
 \end{figure}
 
-在本节中，我们展示了方形晶格与分形晶格的谱电荷，如图\ref{fig:Fractional}(a, b) 所示。白色、紫色和黑色点分别表示晶格中的角态、边缘态和“体”态。我们计算了每个单元格内“体”态的局部态密度 (LDOS) 总和，该过程可以表示为：
+在本节中，我们展示了方形晶格与分形晶格的谱电荷，如图\ref{fig:Fractional}(a, b) 所示。白色、紫色和黑色点分别表示晶格中的角态、边缘态和“体”态。我们计算了每个单元格内“体”态的局部态密度 (Local Density of States, LDOS) 总和，该过程可以表示为：
 
 \begin{equation}
 q = \sum_{i \in \text{occupied}} \sum_{j \in \text{cell}} |\psi_i^j|^2
@@ -322,35 +324,35 @@ q = \sum_{i \in \text{occupied}} \sum_{j \in \text{cell}} |\psi_i^j|^2
 
 其中，\( \psi_i^j \) 是每个单元格内第 \( j \) 个晶格点上第 \( i \) 个被占据的“体”态的波函数。我们通过不同颜色的框表示谱电荷，分别覆盖不同的单元格。红色、蓝色、黄色、绿色和灰色分别表示电荷数为 0.5、1、1.25、1.5 和 2。如图\ref{fig:Fractional}所示，二维晶格和分形晶格外角的分数电荷等于 0.5，这是高阶四极子绝缘体的重要特征。
 
-在二维四极子 HOTI 中，电荷分别等于 0.5、1 和 2，对应于角态、边缘态和体态。然而，在分形晶格中，情况变得更加复杂。由于内角态分裂到两个最近的边缘站点，在内部角处出现了异常的空间电荷 \( q = 1.25, 1.5 \)，如图\ref{fig:Fractional}(b) 所示。
+在二维四极子高阶拓扑绝缘体中，电荷分别等于 0.5、1 和 2，对应于角态、边缘态和体态。然而，在分形晶格中，情况变得更加复杂。由于内角态分裂到两个最近的边缘站点，在内部角处出现了异常的空间电荷 \( q = 1.25, 1.5 \)，如图\ref{fig:Fractional}(b) 所示。
 
 值得注意的是，每个内角的两个角站点分别具有 0.25 的分数电荷，总计贡献 0.5 的分数电荷给每个内角。这一反直觉的结果的原因在于，跨越 \( 3\pi/2 \) 的内角可以将 0.5 的电荷分裂成两部分。
 
-随后，我们计算了内角态和外角态的分数电荷随站点内跃迁的变化关系，以展示相变过程。固定站点间跃迁 \( t_2 = 1 \)，并将站点内跃迁从 -2 变化到 2（如图 \ref{fig:Fractional}(c) 所示），所有三种角态仅在压缩的拓扑非平庸区域（蓝色区域）内被量子化。
+随后，我们计算了内角态和外角态的分数电荷随胞内跃迁的变化关系，以展示相变过程。固定胞间跃迁 \( t_2 = 1 \)，并将胞内跃迁从 -2 变化到 2（如图 \ref{fig:Fractional}(c) 所示），所有三种角态仅在压缩的拓扑非平庸区域（蓝色区域）内被量子化。
 
 由于内角和外角均存在非零的分数电荷，我们得出结论：所有角态均为拓扑非平庸态。尽管内角态和外角态的电荷不同，但它们的拓扑区域是相同的。
 
 \section{高维分形晶格}
-为了检验分形高阶拓扑绝缘体（HOTI）的普适性，我们在理论上构建了三维分形八极子拓扑绝缘体。
+为了检验分形高阶拓扑绝缘体的普适性，我们在理论上构建了三维分形八极子拓扑绝缘体。
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\linewidth]{figure/HOTITheo/3DLattice.png}
-    \caption{高维分形晶格}(a) 分形晶格的最小元胞。(b, c) G(1) 和 G(2) 分形晶格。黑色立方体和白色部分分别表示真空和超原子。每一代 G(n) 的分形晶格由 G(n-1) 的 26 个副本组成。
+    \caption{高维分形晶格。(a) 分形晶格的最小元胞。(b, c) G(1) 和 G(2) 分形晶格。黑色立方体和白色部分分别表示真空和超原子。每一代 G(n) 的分形晶格由 G(n-1) 的 26 个副本组成。}
     \label{fig:3DLattice}
 \end{figure}
 
-我们从传统八极子 HOTI 的元胞开始，如图\ref{fig:3DLattice}(a) 所示。红色（绿色）线表示正（负）跃迁，而粗（细）线分别表示站点间（站点内）跃迁。G(1) 晶格包含 26 个单元，如图\ref{fig:3DLattice}(b) 所示的白色部分。黑色立方体表示真空。G(2) 晶格如图\ref{fig:3DLattice}(c) 所示。由于每一代 Sierpinski 地毯的 G(n) 由 26 份 G(n-1) 组成，因此该分形系统的维度可以计算为：
+我们从传统八极子高阶拓扑绝缘体的元胞开始，如图\ref{fig:3DLattice}(a) 所示。红色（绿色）线表示正（负）跃迁，而粗（细）线分别表示胞间（胞内）跃迁。G(1) 晶格包含 26 个单元，如图\ref{fig:3DLattice}(b) 所示的白色部分。黑色立方体表示真空。G(2) 晶格如图\ref{fig:3DLattice}(c) 所示。由于每一代 Sierpinski 地毯的 G(n) 由 26 份 G(n-1) 组成，因此该分形系统的维度可以计算为：
 
 \begin{equation}
 D_s = \lim_{n \to \infty} \frac{\ln (N_s)}{\ln (N_l)} = \lim_{n \to \infty} \frac{\ln (26^n)}{\ln (3^n)} = \frac{\ln 26}{\ln 3} \approx 2.966
 \end{equation}
 
-能谱随站点内跃迁的变化关系如图\ref{fig:3DSpec}(a) 所示，插图为其放大视图。与前文的 1.893 维晶格类似，该 2.966 维晶格也存在外角态和内角态 A、B，分别用红色、橙色和黄色标记。灰色、蓝色和绿色曲线分别表示“体”态、表面态和边缘态。
+能谱随胞内跃迁的变化关系如图\ref{fig:3DSpec}(a) 所示，插图为其放大视图。与前文的 1.893 维晶格类似，该 2.966 维晶格也存在外角态和内角态 A、B，分别用红色、橙色和黄色标记。灰色、蓝色和绿色曲线分别表示“体”态、表面态和边缘态。
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\linewidth]{figure/HOTITheo/3DSpec.png}
-    \caption{分形“蝴蝶”结构与高维 SC 晶格的量子化八极矩}(a) 能谱随站点内跃迁 \( t_1 \) 的变化关系。红色、橙色和黄色线分别表示外角态、内角态 A 和内角态 B。铰链态、表面态和“体”态分别用绿色、蓝色和灰色标记。插图：(a) 的放大视图。(b) 计算得到的 2.966 维和 3D 晶格的八极矩分别由红色和灰色虚线表示。
+    \caption{分形“蝴蝶”结构与高维 SC 晶格的量子化八极矩。(a) 能谱随胞内跃迁 \( t_1 \) 的变化关系。红色、橙色和黄色线分别表示外角态、内角态 A 和内角态 B。铰链态、表面态和“体”态分别用绿色、蓝色和灰色标记。插图：(a) 的放大视图。(b) 计算得到的 2.966 维和 3D 晶格的八极矩分别由红色和灰色虚线表示。}
     \label{fig:3DSpec}
 \end{figure}
 为了确定压缩的拓扑区域，我们计算了分形晶格中的八极矩：
@@ -361,13 +363,13 @@ O_{xyz} = \frac{1}{2\pi} \text{Im} \log \left[ \frac{\det \left( U^\dagger \hat{
 
 该计算方法类似于正文中的 \( q_{xy} \)，唯一的区别是 \( Q \) 变为 \( \exp[i2\pi \hat{x} \hat{y} / (L_x L_y L_z)] \)。其中，\( L_x, L_y, L_z \) 分别表示晶格在 \( x, y, z \) 方向上的长度。
 
-如图\ref{fig:3DSpec}(b) 所示，分形晶格和三维立方晶格中的拓扑不变量 \( O_{xyz} \) 随站点内跃迁的变化关系分别由红色和灰色点表示。在该分形晶格中，\( O_{xyz} \) 在 \( t_1 = 0.65 \) 处从 0 跳变至 0.5（小于立方晶格的对应值），并在 \( |t_1| < 0.65 \) 时保持 0.5，表明拓扑区域的压缩效应。
+如图\ref{fig:3DSpec}(b) 所示，分形晶格和三维立方晶格中的拓扑不变量 \( O_{xyz} \) 随胞内跃迁的变化关系分别由红色和灰色点表示。在该分形晶格中，\( O_{xyz} \) 在 \( t_1 = 0.65 \) 处从 0 跳变至 0.5（小于立方晶格的对应值），并在 \( |t_1| < 0.65 \) 时保持 0.5，表明拓扑区域的压缩效应。
 
 当 \( t_1=0.1 \) 时的能谱及其放大视图如图\ref{fig:3DState}(a, b) 所示，揭示了角态的自相似性。外角态、内角态 A 和 B 的总空间分布如图\ref{fig:3DState}(c) 所示。与 1.893 维晶格不同，2.966 维晶格的内角态分裂到三个最近的边缘站点，而非两个，这体现了高维晶格的特性。事实上，随着维度的增加，内角态会分裂成越来越多的部分，从而得到丰富的拓扑分数量子化电荷。此外，铰链态、表面态和“体”态的总空间分布如图\ref{fig:3DState}(d) 所示。
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.75\linewidth]{figure/HOTITheo/3DState.png}
-    \caption{有限分形晶格的能谱与本征态}(a, b) 当 \( t_1=0.1 \) 时的能谱及其放大视图。(c) 外角态、内角态 A 和 B 的总空间分布。(d) 铰链态、表面态和“体”态的总空间分布。
+    \caption{有限分形晶格的能谱与本征态。(a, b) 当 \( t_1=0.1 \) 时的能谱及其放大视图。(c) 外角态、内角态 A 和 B 的总空间分布。(d) 铰链态、表面态和“体”态的总空间分布。}
     \label{fig:3DState}
 \end{figure}
 

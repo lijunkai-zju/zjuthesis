@@ -1,10 +1,6 @@
 \cleardoublepage
 
 {
-\ifnumcomp{\TitleEngLines}{=}{3}{
-    \renewcommand{\arraystretch}{0.65}
-}
-
 \begin{center}
     % Chinese zihao{3} == English 16pt
     \bfseries \zihao{3}
@@ -16,24 +12,12 @@
             \uline{\hfill} \\
         }
         {
-            \ifthenelse{\equal{\TitleEngLines}{2}}
-            {
-                % TitleEngLines == 2
-                \uline{\hfill \TitleEngLineOne{} \hfill} \\
-                \uline{\hfill \TitleEngLineTwo{} \hfill} \\
-            }
-            {
-                % TitleEngLines == 3
-                \uline{\hfill \TitleEngLineOne{} \hfill} \\
-                \uline{\hfill \TitleEngLineTwo{} \hfill} \\
-                \uline{\hfill \TitleEngLineThree{} \hfill} \\
-            
-            }
+            % TitleEngLines == 2
+            \uline{\hfill \TitleEngLineOne{} \hfill} \\
+            \uline{\hfill \TitleEngLineTwo{} \hfill} \\
         }
     \end{tabularx}
 \end{center}
-
-\renewcommand{\arraystretch}{1}
 
 \vskip 6pt
 

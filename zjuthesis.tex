@@ -47,13 +47,22 @@
 \setcounter{secnumdepth}{4} % 设置编号深度
 \setcounter{tocdepth}{4}    % 设置目录深度
 
+% 调节图片跨页问题
+\renewcommand\floatpagefraction{.9}
+\renewcommand\topfraction{.9}
+\renewcommand\bottomfraction{.9}
+\renewcommand\textfraction{.1}
+\setcounter{totalnumber}{50}
+\setcounter{topnumber}{50}
+\setcounter{bottomnumber}{50}
+
 \newcommand{\inputgraduate}
 {
     % 封面
     \coverstyle
     \inputpage{cover}
 
-    % 前置部分
+    % % 前置部分
     \prevstyle
     \inputpage{previous}
     \inputpage{toc}
@@ -63,12 +72,9 @@
     \inputbody{Introduction}
     \inputbody{FractalTopo}
     \inputbody{Fractal_Haldane_Theory}
-    \inputbody{Fractal_Haldane_Exp}
     \inputbody{Fractal_HO_Theory}
-    \inputbody{Fractal_HO_Exp}
-    % \inputbody{content}
+    \inputbody{Fractal_Exp}
     
-
     % 附录部分
     \poststyle
     \inputbody{post}

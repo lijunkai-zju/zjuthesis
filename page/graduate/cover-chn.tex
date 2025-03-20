@@ -48,17 +48,11 @@
 
 % Define multi line title
 
-\ifnumcomp{\TitleLines+\TitleEngLines}{=}{5}{
-    \renewcommand{\arraystretch}{0.2}
-}{
-    \ifnumcomp{\TitleLines+\TitleEngLines}{=}{6}{
-        \renewcommand{\arraystretch}{0.2}
-    }
-}
+
 
 \begin{center}
     \bfseries \zihao{-2}
-    \begin{tabularx}{1\textwidth}{>{\fangsong}l X<{\centering}}
+    \begin{tabularx}{.8\textwidth}{>{\fangsong}l X<{\centering}}
         % If titles are too long for one row, please manually hardcode them in
         % multiple lines, as the english title example here.
         \ifthenelse{\equal{\TitleLines}{1}}
@@ -68,18 +62,9 @@
             ~ & \uline{\hfill} \\
         }
         {
-            \ifthenelse{\equal{\TitleLines}{2}}
-            {
-                % TitleLines == 2
-                中文论文题目：&  \uline{\hfill \fangsong \TitleLineOne{} \hfill} \\
-                ~            & \uline{\hfill \fangsong \TitleLineTwo{} \hfill} \\
-            }
-            {
-                % TitleLines == 3
-                中文论文题目：&  \uline{\hfill \fangsong \TitleLineOne{} \hfill} \\
-                ~            & \uline{\hfill \fangsong \TitleLineTwo{} \hfill} \\
-                ~            & \uline{\hfill \fangsong \TitleLineThree{} \hfill} \\
-            }
+            % TitleLines == 2
+            中文论文题目：&  \uline{\hfill \fangsong \TitleLineOne{} \hfill} \\
+            ~            & \uline{\hfill \fangsong \TitleLineTwo{} \hfill} \\
         }
 
         \ifthenelse{\equal{\TitleEngLines}{1}}
@@ -89,23 +74,12 @@
             ~ & \uline{\hfill} \\
         }
         {
-            \ifthenelse{\equal{\TitleEngLines}{2}}
-            {
-                % TitleEngLines == 2
-                英文论文题目：& \zihao{3} \uline{\hfill \TitleEngLineOne{} \hfill} \\
-                ~            & \zihao{3} \uline{\hfill \TitleEngLineTwo{} \hfill} \\
-            }
-            {
-                % TitleEngLines == 3
-                英文论文题目：& \zihao{3} \uline{\hfill \TitleEngLineOne{} \hfill} \\
-                ~            & \zihao{3} \uline{\hfill \TitleEngLineTwo{} \hfill} \\
-                ~            & \zihao{3} \uline{\hfill \TitleEngLineThree{} \hfill} \\
-            }
+            % TitleEngLines == 2
+            英文论文题目：& \zihao{3} \uline{\hfill \TitleEngLineOne{} \hfill} \\
+            ~            & \zihao{3} \uline{\hfill \TitleEngLineTwo{} \hfill} \\
         }
     \end{tabularx}
 \end{center}
-
-\renewcommand{\arraystretch}{1}
 
 \ifthenelse{\equal{\DepartmentLines}{1}}
 {
